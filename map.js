@@ -70,7 +70,7 @@ dropdown.onAdd = function(map) {
       options += '<option value=' + i + '>' + dropdownLocations[i].name + '</option>'
     }
     div.innerHTML = '<select id="dropdown" onchange="fly()">' + options + '</select>';
-    div.innerHTML += '<i class="fa fa-location-arrow" aria-hidden="true"></i>';
+    div.innerHTML += '<i class="fa fa-caret-down"></i>';
     return div;
 };
 dropdown.addTo(map);

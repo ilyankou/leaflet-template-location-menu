@@ -16,7 +16,9 @@ body {
   right: 10px;
   top: 50%;
   transform: translateY(-7px);
-  color: #ddd;
+  color: #777;
+  opacity: 0.8;
+  pointer-events: none;
 }
 
 #dropdown {
