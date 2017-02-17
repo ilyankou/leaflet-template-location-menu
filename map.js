@@ -29,7 +29,8 @@ var dropdownLocations = [
 var map = L.map('map', {
   center: [41.79, -72.6],
   zoom: 10,
-  scrollWheelZoom: false
+  scrollWheelZoom: false,
+  attributionControl: false
 });
 
 new L.tileLayer('http://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png')
@@ -82,3 +83,10 @@ for (i in dropdownLocations) {
     .bindPopup(dropdownLocations[i].name)
     .addTo(map);
 }
+
+var credit = L.control.attribution({
+    prefix: 'View <a href="https://github.com/JackDougherty/leaflet-template-location-menu">code on GitHub</a>',
+  })
+  .addAttribution('<a href="https://github.com/JackDougherty/datavizforall">DataVizForAll</a>')
+  .addAttribution('<a href="http://leafletjs.com">Leaflet</a>')
+  .addTo(map);
